@@ -9,6 +9,7 @@
 		<typeAlias alias="Param" type="testMybatis.model.Param"/>
 		<typeAlias alias="Param2" type="testMybatis.model.Param2"/>
 		<typeAlias alias="State" type="testMybatis.model.State"/>
+        <typeAlias alias="TestSP" type="testMybatis.model.TestSP"/>
 	</typeAliases>
 	
 	<environments default="development">

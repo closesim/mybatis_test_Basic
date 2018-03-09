@@ -1,15 +1,16 @@
 package testMybatis.data;
 
 
-import java.util.List;
-import java.util.Map;
-
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.mapping.StatementType;
 import testMybatis.model.Param;
 import testMybatis.model.Param2;
 import testMybatis.model.State;
+import testMybatis.model.TestSP;
+
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -24,6 +25,8 @@ public interface SPMapper {
 	Object callGetTotalCity(Param param);
 	Object callGetTotalCity2(Map<String, Object> param);
 	Object callGetTotalCityStateId(Param2 param2);
+
+	Object callGetTotalCityStateIdTest(TestSP param);
 	List<State> callGetStates();
 	
 	//--methos bellow are the same as above, but they are using annotations

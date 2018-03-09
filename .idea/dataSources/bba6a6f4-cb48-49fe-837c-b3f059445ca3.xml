@@ -1087,11 +1087,11 @@
       <ArgumentDirection>O</ArgumentDirection>
       <DataType>int(11)|0</DataType>
     </argument>
-    <argument id="269" parent="250" name="stateId">
+    <argument id="269" parent="250" name="stateId_id">
       <Position>1</Position>
       <DataType>smallint(6)|0</DataType>
     </argument>
-    <argument id="270" parent="250" name="total_cities">
+    <argument id="270" parent="250" name="total">
       <Position>2</Position>
       <ArgumentDirection>O</ArgumentDirection>
       <DataType>int(11)|0</DataType>

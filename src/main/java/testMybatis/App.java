@@ -12,7 +12,7 @@ public class App
     {
         StoreProcedureDAO storeProcedureDAO;
         storeProcedureDAO = new StoreProcedureDAO();
-        System.out.println("Result: "+ storeProcedureDAO.callGetTotalCityStateId());
+        System.out.println("Result: " + storeProcedureDAO.callGetTotalCityStateIdTest());
         System.out.println( "Hello World!" );
     }
 }

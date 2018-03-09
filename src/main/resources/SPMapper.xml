@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="testMybatis.data.SPMapper">
 
@@ -36,6 +36,12 @@
     	{ CALL getTotalCityStateId(
 	    	#{stateId, mode=IN, jdbcType=INTEGER},
 	    	#{total, mode=OUT, jdbcType=INTEGER})}
+	</select>
+
+	<select id="callGetTotalCityStateIdTest" parameterType="TestSP" statementType="CALLABLE" resultType="TestSP">
+		{ CALL getTotalCityStateId(
+		#{stateId, mode=IN, javaType=java.lang.Integer, jdbcType=INTEGER},
+		#{total, mode=OUT, javaType=java.lang.Integer, jdbcType=INTEGER})}
 	</select>
 	
 	<resultMap type="State" id="resultState">

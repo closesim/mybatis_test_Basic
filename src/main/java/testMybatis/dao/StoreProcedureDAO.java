@@ -6,6 +6,7 @@ import testMybatis.data.SPMapper;
 import testMybatis.model.Param;
 import testMybatis.model.Param2;
 import testMybatis.model.State;
+import testMybatis.model.TestSP;
 
 import java.util.HashMap;
 import java.util.List;
@@ -67,6 +68,23 @@ public class StoreProcedureDAO {
             param2.setStateId(1);
             spMapper.callGetTotalCityStateId(param2);
             return param2.getTotal();
+        } finally {
+            session.close();
+        }
+    }
+
+    public int callGetTotalCityStateIdTest() {
+
+        SqlSessionFactory sqlSessionFactory = MyBatisConnectionFactory.getSqlSessionFactory();
+        SqlSession session = sqlSessionFactory.openSession();
+
+        SPMapper spMapper = session.getMapper(SPMapper.class);
+
+        try {
+            TestSP param = new TestSP();
+            param.setStateId(1);
+            spMapper.callGetTotalCityStateIdTest(param);
+            return param.getTotal();
         } finally {
             session.close();
         }

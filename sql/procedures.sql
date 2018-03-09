@@ -27,11 +27,12 @@ USE `blog_ibatis`;
 DROP procedure IF EXISTS `getTotalCityStateId`;
 DELIMITER $$
 USE `blog_ibatis`$$
-CREATE PROCEDURE `blog_ibatis`.`getTotalCityStateId` (IN stateId SMALLINT, OUT total_cities INTEGER)
+CREATE PROCEDURE `blog_ibatis`.`getTotalCityStateId`(IN stateId_id SMALLINT, OUT total INTEGER)
 BEGIN
-    SELECT count(*) into total_cities
+    SELECT count(*)
+    INTO total
     FROM city
-    WHERE state_id = stateId;
+    WHERE state_id = stateId_id;
 END
 $$
 DELIMITER ;
