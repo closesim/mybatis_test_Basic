@@ -35,7 +35,7 @@
   	<select id="callGetTotalCityStateId" parameterType="Param2" statementType="CALLABLE">
     	{ CALL getTotalCityStateId(
 	    	#{stateId, mode=IN, jdbcType=INTEGER},
-	    	#{shit, mode=OUT, jdbcType=INTEGER})}
+	    	#{total, mode=OUT, jdbcType=INTEGER})}
 	</select>
 	
 	<resultMap type="State" id="resultState">

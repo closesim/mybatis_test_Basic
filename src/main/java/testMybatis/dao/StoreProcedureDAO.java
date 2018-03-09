@@ -66,7 +66,7 @@ public class StoreProcedureDAO {
             Param2 param2 = new Param2();
             param2.setStateId(1);
             spMapper.callGetTotalCityStateId(param2);
-            return param2.getShit();
+            return param2.getTotal();
         } finally {
             session.close();
         }
@@ -113,7 +113,7 @@ public class StoreProcedureDAO {
             Param2 param2 = new Param2();
             param2.setStateId(1);
             spMapper.callGetTotalCityStateIdAnnotations(param2);
-            return param2.getShit();
+            return param2.getTotal();
         } finally {
             session.close();
         }
